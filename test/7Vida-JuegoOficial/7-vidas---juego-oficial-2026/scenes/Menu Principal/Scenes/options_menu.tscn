@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bere44dj3v1f4"]
+
+[ext_resource type="Script" uid="uid://5x0gndfkie15" path="res://scenes/Menu Principal/Scripts/options_menu.gd" id="1_oreol"]
+[ext_resource type="AudioStream" uid="uid://dnngh6dqhcj6w" path="res://assets/UI_Navigation_7V.wav" id="2_ftk1t"]
+[ext_resource type="Texture2D" uid="uid://dyw6bgg37rn7c" path="res://assets/Buttons/Salir_normal.png" id="3_a218m"]
+[ext_resource type="AudioStream" uid="uid://c8smyis52claq" path="res://assets/UI_Confirm_7V.wav" id="3_vw1da"]
+[ext_resource type="AudioStream" uid="uid://bkl8ui1vn31al" path="res://assets/UI_Cancel_7V.wav" id="4_7ik2x"]
+[ext_resource type="Texture2D" uid="uid://gecqs6dmlhcv" path="res://assets/Buttons/Salir_Brillante_General.png" id="4_a218m"]
+[ext_resource type="Texture2D" uid="uid://call811sphd5x" path="res://assets/MainMenu Animated/Gatitou1.png" id="7_f1war"]
+[ext_resource type="Texture2D" uid="uid://xv05a2oo7803" path="res://assets/MainMenu Animated/Gatitou2.png" id="8_lpjq5"]
+[ext_resource type="Texture2D" uid="uid://c73sk5uydrqdv" path="res://assets/MainMenu Animated/Gatitou3.png" id="9_t1edb"]
+[ext_resource type="Texture2D" uid="uid://c2tblb6x6qy23" path="res://assets/MainMenu Animated/Gatitou4.png" id="10_34wgd"]
+[ext_resource type="Texture2D" uid="uid://d30dcry15xo1" path="res://assets/MainMenu Animated/Gatitou5.png" id="11_1b2bi"]
+[ext_resource type="Texture2D" uid="uid://bn4qax1n6u6gp" path="res://assets/MainMenu Animated/Gatitou6.png" id="12_vxixu"]
+[ext_resource type="Texture2D" uid="uid://b0jnhtf126ins" path="res://assets/MainMenu Animated/Gatitou7.png" id="13_dtjug"]
+[ext_resource type="Texture2D" uid="uid://do2ulw6w8v6q4" path="res://assets/Opciones Iconos/opciones4.png" id="13_t1edb"]
+[ext_resource type="Texture2D" uid="uid://dt8uer748eojb" path="res://assets/Opciones Iconos/volumen4.png" id="14_34wgd"]
+[ext_resource type="Texture2D" uid="uid://c6fh5ocpsk8ad" path="res://assets/MainMenu Animated/Gatitou8.png" id="14_st330"]
+[ext_resource type="Texture2D" uid="uid://c8vnr85xl8pm0" path="res://assets/MainMenu Animated/Gatitou9.png" id="15_4os22"]
+[ext_resource type="Texture2D" uid="uid://dhulrmh7315fq" path="res://assets/MainMenu Animated/Gatitou10.png" id="16_xdgpm"]
+[ext_resource type="Texture2D" uid="uid://cdsq5uiobiyin" path="res://assets/MainMenu Animated/Gatitou11.png" id="17_0vn2y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w3pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_f1war")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lpjq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t1edb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_34wgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1b2bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vxixu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dtjug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_st330")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4os22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xdgpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0vn2y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Options" type="Control" unique_id=1030059208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oreol")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1411287516]
+position = Vector2(320.49997, 180)
+scale = Vector2(10.109375, 11.5)
+sprite_frames = SubResource("SpriteFrames_8w3pq")
+autoplay = "default"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=399175052]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 71.0
+offset_right = 627.0
+offset_bottom = 271.0
+texture = ExtResource("13_t1edb")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=171488810]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 141.0
+offset_right = 653.0
+offset_bottom = 341.0
+scale = Vector2(0.5868873, 0.5868873)
+texture = ExtResource("14_34wgd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=391282142]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 215.0
+offset_right = 603.0
+offset_bottom = 355.0
+
+[node name="VolumenSlider" type="HSlider" parent="VBoxContainer" unique_id=426980872]
+layout_mode = 2
+value = 80.0
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer" unique_id=1179683048]
+layout_mode = 2
+text = "Pantalla Completa"
+
+[node name="ExitOptions" type="TextureButton" parent="VBoxContainer" unique_id=345363437]
+layout_mode = 2
+texture_normal = ExtResource("3_a218m")
+texture_pressed = ExtResource("4_a218m")
+texture_hover = ExtResource("4_a218m")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="VBoxContainer" unique_id=629967153]
+stream = ExtResource("2_ftk1t")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="VBoxContainer" unique_id=603101904]
+stream = ExtResource("3_vw1da")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="BackSound" type="AudioStreamPlayer" parent="VBoxContainer" unique_id=1861168564]
+stream = ExtResource("4_7ik2x")
+volume_db = 5.0
+max_polyphony = 8
+
+[connection signal="value_changed" from="VBoxContainer/VolumenSlider" to="." method="_on_volumen_slider_value_changed"]
+[connection signal="toggled" from="VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="VBoxContainer/ExitOptions" to="." method="_on_exit_options_pressed"]

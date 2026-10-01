@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bquk7nqx3uaqc"
+path="res://.godot/imported/AMB_Restaurante_7V.wav-9688c98f6f3cb07d93e0b4c12d729447.sample"
+
+[deps]
+
+source_file="res://scenes/Nivel Principal/sounds/AMB_Restaurante_7V.wav"
+dest_files=["res://.godot/imported/AMB_Restaurante_7V.wav-9688c98f6f3cb07d93e0b4c12d729447.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

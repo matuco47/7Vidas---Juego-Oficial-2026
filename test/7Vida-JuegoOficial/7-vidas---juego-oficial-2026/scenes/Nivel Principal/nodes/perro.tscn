@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dfjvtvmrkwyem"]
+
+[ext_resource type="Script" uid="uid://kp8gqxt50g6y" path="res://7 Vidas/scripts/area_2d.gd" id="1_bqyrm"]
+[ext_resource type="Script" uid="uid://cfgaoupxjypq6" path="res://7 Vidas/scripts/perro.gd" id="1_r7y4d"]
+[ext_resource type="Texture2D" uid="uid://dwo0qp1tm5fvb" path="res://7 Vidas/sprites/perro/perro_corriendo1.png" id="2_j7bh2"]
+[ext_resource type="Texture2D" uid="uid://dh0fy70ibsofg" path="res://7 Vidas/sprites/perro/perro_corriendo2.png" id="3_821e7"]
+[ext_resource type="AudioStream" uid="uid://c0toi10wpe0yt" path="res://7 Vidas/sounds/SFX_Perro_Corrida_1_7V.wav" id="5_tl48i"]
+[ext_resource type="AudioStream" uid="uid://ciuyg8f44ljsb" path="res://7 Vidas/sounds/SFX_Perro_Ladrido_1_7V.wav" id="6_76qih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r34kd"]
+size = Vector2(32, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkrlg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j7bh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_821e7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Perro" type="CharacterBody2D" unique_id=1778780464]
+script = ExtResource("1_r7y4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079973673]
+scale = Vector2(0.9, 1)
+shape = SubResource("RectangleShape2D_r34kd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2015530872]
+sprite_frames = SubResource("SpriteFrames_xkrlg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1771147760]
+scale = Vector2(0.99999994, 1)
+script = ExtResource("1_bqyrm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=680373982]
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_r34kd")
+
+[node name="Caminar" type="AudioStreamPlayer2D" parent="." unique_id=833384638]
+stream = ExtResource("5_tl48i")
+max_distance = 500.0
+
+[node name="Ladra" type="AudioStreamPlayer2D" parent="." unique_id=1154067272]
+stream = ExtResource("6_76qih")
+max_distance = 500.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

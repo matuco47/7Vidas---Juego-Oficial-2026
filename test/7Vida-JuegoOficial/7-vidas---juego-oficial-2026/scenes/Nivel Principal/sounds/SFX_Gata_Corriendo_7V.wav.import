@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dffyjanfqvnm5"
+path="res://.godot/imported/SFX_Gata_Corriendo_7V.wav-308e516d7c5f1d6be8e2eb700a5403ac.sample"
+
+[deps]
+
+source_file="res://scenes/Nivel Principal/sounds/SFX_Gata_Corriendo_7V.wav"
+dest_files=["res://.godot/imported/SFX_Gata_Corriendo_7V.wav-308e516d7c5f1d6be8e2eb700a5403ac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

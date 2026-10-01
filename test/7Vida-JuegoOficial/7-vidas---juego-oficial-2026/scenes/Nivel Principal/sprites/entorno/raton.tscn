@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://ckg3mo7wmjeyl"]
+
+[ext_resource type="Script" uid="uid://cdopn4fiwnrnb" path="res://raton.gd" id="1_yt8dk"]
+[ext_resource type="Texture2D" uid="uid://brbh0u3fmflw8" path="res://7 Vidas/entorno/Raton-anim.png" id="2_vaaln"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ple5c"]
+atlas = ExtResource("2_vaaln")
+region = Rect2(0, 0, 295, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxraj"]
+atlas = ExtResource("2_vaaln")
+region = Rect2(590, 0, 295, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r106"]
+atlas = ExtResource("2_vaaln")
+region = Rect2(1180, 0, 295, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02xsc"]
+atlas = ExtResource("2_vaaln")
+region = Rect2(885, 0, 295, 443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04dl8"]
+atlas = ExtResource("2_vaaln")
+region = Rect2(1475, 0, 295, 443)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vanes"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ple5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxraj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r106")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02xsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04dl8")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slf6f"]
+size = Vector2(78.5, 42.75)
+
+[node name="Area2D" type="Area2D" unique_id=906109659]
+position = Vector2(-15, 45)
+script = ExtResource("1_yt8dk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=596870297]
+position = Vector2(1, 0)
+scale = Vector2(0.32966095, 0.24972823)
+sprite_frames = SubResource("SpriteFrames_vanes")
+animation = &"Walk"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=979727939]
+position = Vector2(22, 27)
+shape = SubResource("RectangleShape2D_slf6f")

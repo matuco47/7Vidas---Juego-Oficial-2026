@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://chrhugw4pwycf"]
+
+[ext_resource type="Script" uid="uid://c0l684f60hhdk" path="res://scenes/Menu Principal/Scripts/credits.gd" id="1_fkpdb"]
+[ext_resource type="Texture2D" uid="uid://dls0kftspfukc" path="res://assets/Fondo Negro.png" id="1_ksfdo"]
+[ext_resource type="Texture2D" uid="uid://cmnj58yvin70n" path="res://assets/DevelopersIMG/01_Catalina_Avancini.png" id="2_fkpdb"]
+[ext_resource type="Texture2D" uid="uid://cyka14fr3fxwi" path="res://assets/DevelopersIMG/02_matuco47.png" id="3_ho2f6"]
+[ext_resource type="Texture2D" uid="uid://cowe6rsby7e81" path="res://assets/DevelopersIMG/03_Ailn_Quiroga.png" id="4_jk0ob"]
+[ext_resource type="Texture2D" uid="uid://brdnbtubd7ng3" path="res://assets/DevelopersIMG/04_Martn_Valente.png" id="5_cnorb"]
+[ext_resource type="Texture2D" uid="uid://biwjtyu5cwvwc" path="res://assets/DevelopersIMG/05_Priscila_Olivares.png" id="6_dbpsx"]
+[ext_resource type="Texture2D" uid="uid://t4lt85grvr6a" path="res://assets/DevelopersIMG/06_Santyeeaaahhhh.png" id="7_sdrp8"]
+[ext_resource type="Texture2D" uid="uid://bbeql8u1bky06" path="res://assets/DevelopersIMG/07_Alex.png" id="8_34b34"]
+[ext_resource type="Texture2D" uid="uid://by8r5n1oop5xy" path="res://assets/DevelopersIMG/08_jnaxho.png" id="9_3fp6q"]
+[ext_resource type="Texture2D" uid="uid://80q4e0j6wqqu" path="res://assets/DevelopersIMG/09_paula_Dominguez.png" id="10_ott4q"]
+[ext_resource type="Texture2D" uid="uid://dyw6bgg37rn7c" path="res://assets/Buttons/Salir_normal.png" id="12_sdrp8"]
+[ext_resource type="Texture2D" uid="uid://gecqs6dmlhcv" path="res://assets/Buttons/Salir_Brillante_General.png" id="13_sdrp8"]
+[ext_resource type="AudioStream" uid="uid://dnngh6dqhcj6w" path="res://assets/UI_Navigation_7V.wav" id="14_3fp6q"]
+[ext_resource type="AudioStream" uid="uid://c8smyis52claq" path="res://assets/UI_Confirm_7V.wav" id="15_ott4q"]
+[ext_resource type="AudioStream" uid="uid://bkl8ui1vn31al" path="res://assets/UI_Cancel_7V.wav" id="16_1w2xw"]
+
+[node name="Credits" type="Node2D" unique_id=663244798]
+script = ExtResource("1_fkpdb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=388422340]
+
+[node name="Fondo Negro" type="Sprite2D" parent="." unique_id=965669537]
+position = Vector2(1332, 707.00006)
+scale = Vector2(1.7000165, 1.6845618)
+texture = ExtResource("1_ksfdo")
+
+[node name="ImagenDeveloper" type="Sprite2D" parent="." unique_id=910267467]
+position = Vector2(151.53094, 176.99156)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("2_fkpdb")
+
+[node name="ImagenDeveloper2" type="Sprite2D" parent="." unique_id=571032513]
+position = Vector2(450, 185)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("3_ho2f6")
+
+[node name="ImagenDeveloper3" type="Sprite2D" parent="." unique_id=2378167]
+position = Vector2(782, 178)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("4_jk0ob")
+
+[node name="ImagenDeveloper4" type="Sprite2D" parent="." unique_id=1800530619]
+position = Vector2(1064, 182)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("5_cnorb")
+
+[node name="ImagenDeveloper5" type="Sprite2D" parent="." unique_id=1875353638]
+position = Vector2(151.99998, 521)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("6_dbpsx")
+
+[node name="ImagenDeveloper6" type="Sprite2D" parent="." unique_id=2043725301]
+position = Vector2(299, 869.99994)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("7_sdrp8")
+
+[node name="ImagenDeveloper7" type="Sprite2D" parent="." unique_id=945127828]
+position = Vector2(788, 529)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("8_34b34")
+
+[node name="ImagenDeveloper8" type="Sprite2D" parent="." unique_id=1043455765]
+position = Vector2(1066, 535)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("9_3fp6q")
+
+[node name="ImagenDeveloper9" type="Sprite2D" parent="." unique_id=179721034]
+position = Vector2(450, 524)
+scale = Vector2(0.5745244, 0.5745244)
+texture = ExtResource("10_ott4q")
+
+[node name="CameraPoints" type="Node2D" parent="." unique_id=1504144483]
+
+[node name="Point1" type="Marker2D" parent="CameraPoints" unique_id=100149747]
+position = Vector2(307, 175)
+
+[node name="Point2" type="Marker2D" parent="CameraPoints" unique_id=1488786060]
+position = Vector2(923, 178)
+
+[node name="Point3" type="Marker2D" parent="CameraPoints" unique_id=124362026]
+position = Vector2(304, 535)
+
+[node name="Point4" type="Marker2D" parent="CameraPoints" unique_id=352805836]
+position = Vector2(927, 524)
+
+[node name="Point5" type="Marker2D" parent="CameraPoints" unique_id=347164930]
+position = Vector2(312, 862)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1313393102]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1925720167]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ExitCredits" type="TextureButton" parent="UI/VBoxContainer" unique_id=438928880]
+layout_mode = 2
+texture_normal = ExtResource("12_sdrp8")
+texture_pressed = ExtResource("13_sdrp8")
+texture_hover = ExtResource("13_sdrp8")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="UI/VBoxContainer" unique_id=337094870]
+stream = ExtResource("14_3fp6q")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="UI/VBoxContainer" unique_id=1839717626]
+stream = ExtResource("15_ott4q")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="BackSound" type="AudioStreamPlayer" parent="UI/VBoxContainer" unique_id=1470230604]
+stream = ExtResource("16_1w2xw")
+volume_db = 5.0
+max_polyphony = 8
+
+[connection signal="pressed" from="UI/VBoxContainer/ExitCredits" to="." method="_on_exit_credits_pressed"]

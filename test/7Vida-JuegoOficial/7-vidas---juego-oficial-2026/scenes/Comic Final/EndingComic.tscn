@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://floqj1e433n"]
+
+[ext_resource type="Texture2D" uid="uid://dls0kftspfukc" path="res://assets/Fondo Negro.png" id="1_6xwih"]
+[ext_resource type="Script" uid="uid://u2bq06w8c48u" path="res://scenes/Comic Final/comicfinal.gd" id="1_tv815"]
+[ext_resource type="Texture2D" uid="uid://ckiqxdjr41hfw" path="res://assets/Comic 3.jpeg" id="2_tv815"]
+[ext_resource type="Texture2D" uid="uid://dmfgas5gfl6ht" path="res://assets/Comic Final.jpeg" id="3_bpp7r"]
+
+[node name="EndingComic" type="Node2D" unique_id=1186496154]
+script = ExtResource("1_tv815")
+
+[node name="Fondo Negro" type="Sprite2D" parent="." unique_id=1257766894]
+position = Vector2(468, 222)
+scale = Vector2(1.7000165, 1.6845618)
+texture = ExtResource("1_6xwih")
+
+[node name="ComicPage1" type="Sprite2D" parent="." unique_id=1339607044]
+position = Vector2(223.4874, 223.00002)
+scale = Vector2(0.4345457, 0.4345457)
+texture = ExtResource("2_tv815")
+
+[node name="ComicPage2" type="Sprite2D" parent="." unique_id=1156605099]
+position = Vector2(221, -3.999999)
+scale = Vector2(0.44104797, 0.44104797)
+texture = ExtResource("3_bpp7r")
+
+[node name="CameraPoints" type="Node2D" parent="." unique_id=1933626540]
+
+[node name="Panel1" type="Marker2D" parent="CameraPoints" unique_id=1940492083]
+position = Vector2(214, 336)
+
+[node name="Panel2" type="Marker2D" parent="CameraPoints" unique_id=840590221]
+position = Vector2(220, 8)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=51849628]
+position = Vector2(-158, -32)

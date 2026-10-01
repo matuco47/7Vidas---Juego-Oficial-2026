@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b4avga2d8y83"]
+
+[ext_resource type="Script" uid="uid://cj2b4tbsp6sew" path="res://scenes/Menu Principal/Scripts/loadingscreen.gd" id="1_8krkq"]
+[ext_resource type="Texture2D" uid="uid://dls0kftspfukc" path="res://assets/Fondo Negro.png" id="1_ccq5f"]
+[ext_resource type="Texture2D" uid="uid://bgnjtlvnh7q3r" path="res://assets/LoadingScreen/cargando1.png" id="2_8krkq"]
+[ext_resource type="Texture2D" uid="uid://j0h8cjcwmke7" path="res://assets/LoadingScreen/cargando2.png" id="3_usde4"]
+[ext_resource type="Texture2D" uid="uid://ddhylj1eefn74" path="res://assets/LoadingScreen/cargando3.png" id="4_fhrg2"]
+[ext_resource type="Texture2D" uid="uid://cujocfqw8edx1" path="res://assets/LoadingScreen/cargando4.png" id="5_yu4rb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5m0q7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8krkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_usde4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fhrg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yu4rb")
+}],
+"loop": 1,
+"name": &"Loading",
+"speed": 3.0
+}]
+
+[node name="LoadingScreen" type="Node2D" unique_id=2137042699]
+script = ExtResource("1_8krkq")
+
+[node name="Fondo Negro" type="Sprite2D" parent="." unique_id=1139162775]
+position = Vector2(1327, 722.00006)
+scale = Vector2(1.7000165, 1.6845618)
+texture = ExtResource("1_ccq5f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1958309749]
+position = Vector2(331, 316)
+sprite_frames = SubResource("SpriteFrames_5m0q7")
+animation = &"Loading"
+autoplay = "Loading"
+frame = 2
+frame_progress = 0.22216555

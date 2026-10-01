@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dwehwuptxuc68"]
+
+[ext_resource type="Texture2D" uid="uid://b27gvkoux1xsp" path="res://7 Vidas/sprites/Auto/AUTO3.png" id="1_8p3we"]
+[ext_resource type="Script" uid="uid://ch6v853wou3tj" path="res://7 Vidas/scripts/auto.gd" id="1_jxvgj"]
+[ext_resource type="Texture2D" uid="uid://cmkq2vttl416y" path="res://7 Vidas/sprites/Auto/AUTO5.png" id="3_a4sr0"]
+[ext_resource type="Texture2D" uid="uid://q5knirfcw1e8" path="res://7 Vidas/sprites/Auto/AUTO4.png" id="3_jxvgj"]
+[ext_resource type="Texture2D" uid="uid://dydax63jax66s" path="res://7 Vidas/sprites/Auto/AUTO1.png" id="4_r1so8"]
+[ext_resource type="Texture2D" uid="uid://cffe8ccsagemp" path="res://7 Vidas/sprites/Auto/AUTO2.png" id="5_m8sro"]
+[ext_resource type="AudioStream" uid="uid://jk2vwkvajjtf" path="res://7 Vidas/sounds/SFX_Auto_Rápido_7V.wav" id="7_a4sr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkrlg"]
+size = Vector2(31, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkrlg"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_8p3we")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_jxvgj")
+}],
+"loop": 1,
+"name": &"acercando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a4sr0")
+}],
+"loop": 1,
+"name": &"contacto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("4_r1so8")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_m8sro")
+}],
+"loop": 1,
+"name": &"lejos",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=45951950]
+script = ExtResource("1_jxvgj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410267666]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_xkrlg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=385626934]
+sprite_frames = SubResource("SpriteFrames_xkrlg")
+animation = &"contacto"
+
+[node name="Pasando" type="AudioStreamPlayer2D" parent="." unique_id=532858500]
+stream = ExtResource("7_a4sr0")
+max_distance = 1500.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

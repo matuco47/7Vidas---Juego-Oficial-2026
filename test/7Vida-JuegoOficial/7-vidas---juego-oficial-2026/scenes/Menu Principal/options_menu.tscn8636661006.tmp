@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bere44dj3v1f4"]
+
+[ext_resource type="Script" uid="uid://5x0gndfkie15" path="res://7 Vidas/scenes/Menu Principal/options_menu.gd" id="1_oreol"]
+[ext_resource type="AudioStream" uid="uid://dnngh6dqhcj6w" path="res://7 Vidas/assets/UI_Navigation_7V.wav" id="2_ftk1t"]
+[ext_resource type="AudioStream" uid="uid://c8smyis52claq" path="res://7 Vidas/assets/UI_Confirm_7V.wav" id="3_vw1da"]
+[ext_resource type="AudioStream" uid="uid://bkl8ui1vn31al" path="res://7 Vidas/assets/UI_Cancel_7V.wav" id="4_7ik2x"]
+
+[node name="Options" type="Control" unique_id=1030059208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oreol")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1889601219]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=391282142]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=749828315]
+layout_mode = 2
+text = "Opciones"
+
+[node name="Volumen" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1078120841]
+layout_mode = 2
+text = "Volumen"
+
+[node name="VolumenSlider" type="HSlider" parent="CenterContainer/VBoxContainer" unique_id=426980872]
+layout_mode = 2
+value = 80.0
+
+[node name="CheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer" unique_id=1179683048]
+layout_mode = 2
+text = "Pantalla Completa"
+
+[node name="ExitOptions" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2046177634]
+layout_mode = 2
+text = "Volver al Menú"
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer" unique_id=629967153]
+stream = ExtResource("2_ftk1t")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer" unique_id=603101904]
+stream = ExtResource("3_vw1da")
+volume_db = 5.0
+max_polyphony = 8
+
+[node name="BackSound" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer" unique_id=1861168564]
+stream = ExtResource("4_7ik2x")
+volume_db = 5.0
+max_polyphony = 8
+
+[connection signal="value_changed" from="CenterContainer/VBoxContainer/VolumenSlider" to="." method="_on_volumen_slider_value_changed"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitOptions" to="." method="_on_exit_options_pressed"]

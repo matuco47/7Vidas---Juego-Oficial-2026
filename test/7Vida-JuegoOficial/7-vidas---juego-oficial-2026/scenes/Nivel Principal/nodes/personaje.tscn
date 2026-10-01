@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cpwijkakxynr0"]
+
+[ext_resource type="Script" uid="uid://dtrqdnt6afy2q" path="res://scenes/Nivel Principal/scripts/personaje.gd" id="1_35tar"]
+[ext_resource type="Texture2D" uid="uid://cdgyvecljtnm8" path="res://scenes/Nivel Principal/sprites/gato/gato_sentado_1.png" id="2_iubb0"]
+[ext_resource type="Texture2D" uid="uid://f0y4gk3je3kw" path="res://scenes/Nivel Principal/sprites/gato/gato_agachado_1.png" id="2_q1dih"]
+[ext_resource type="Texture2D" uid="uid://dqaukjdrtlt75" path="res://scenes/Nivel Principal/sprites/gato/gato_camina.png" id="3_eg0hg"]
+[ext_resource type="AudioStream" uid="uid://dffyjanfqvnm5" path="res://scenes/Nivel Principal/sounds/SFX_Gata_Corriendo_7V.wav" id="5_7jl5t"]
+[ext_resource type="AudioStream" uid="uid://b75duewla1q4r" path="res://scenes/Nivel Principal/sounds/SFX_Daño_7V.wav" id="6_ul6br"]
+[ext_resource type="AudioStream" uid="uid://lwgthbffcuyx" path="res://scenes/Nivel Principal/sounds/SFX_Come_Raton_7V.wav" id="7_3aksh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5m0q7"]
+radius = 6.0
+height = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtwrx"]
+atlas = ExtResource("2_q1dih")
+region = Rect2(0, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_088pv"]
+atlas = ExtResource("2_q1dih")
+region = Rect2(0, 32, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5ome"]
+atlas = ExtResource("2_iubb0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yalww"]
+atlas = ExtResource("2_iubb0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iubb0"]
+atlas = ExtResource("3_eg0hg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jl5t"]
+atlas = ExtResource("3_eg0hg")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkrlg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtwrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_088pv")
+}],
+"loop": 1,
+"name": &"agachado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_l5ome")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yalww")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iubb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jl5t")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Personaje" type="CharacterBody2D" unique_id=725968124]
+script = ExtResource("1_35tar")
+fuerza_salto = 350.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1526557554]
+shape = SubResource("CapsuleShape2D_5m0q7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=919525729]
+scale = Vector2(0.1, 0.1)
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=455874104]
+sprite_frames = SubResource("SpriteFrames_xkrlg")
+animation = &"agachado"
+
+[node name="Caminar" type="AudioStreamPlayer2D" parent="." unique_id=79097985]
+stream = ExtResource("5_7jl5t")
+max_polyphony = 3
+
+[node name="Dano" type="AudioStreamPlayer2D" parent="." unique_id=507050040]
+stream = ExtResource("6_ul6br")
+max_polyphony = 3
+
+[node name="Curar" type="AudioStreamPlayer2D" parent="." unique_id=781986977]
+stream = ExtResource("7_3aksh")
+max_polyphony = 3
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=776988696]

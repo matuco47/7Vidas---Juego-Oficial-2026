@@ -1,0 +1,130 @@
+[gd_scene format=4 uid="uid://cbpgvfcp6erxl"]
+
+[ext_resource type="PackedScene" uid="uid://b7ciy6sh4ya0l" path="res://7 Vidas/nodes/hud.tscn" id="1_5iuem"]
+[ext_resource type="PackedScene" uid="uid://cpwijkakxynr0" path="res://7 Vidas/nodes/personaje.tscn" id="2_wwejk"]
+[ext_resource type="Texture2D" uid="uid://dagmrlocufxwi" path="res://kenney_scribble-platformer/PNG/Retina/effect_shotLarge.png" id="3_q7tpy"]
+[ext_resource type="Texture2D" uid="uid://biyttnvmq5u3a" path="res://kenney_scribble-platformer/PNG/Retina/tile.png" id="4_tu8l8"]
+[ext_resource type="PackedScene" uid="uid://dfjvtvmrkwyem" path="res://7 Vidas/nodes/perro.tscn" id="5_oh65p"]
+[ext_resource type="Texture2D" uid="uid://cvgc1rg5yyo3a" path="res://7 Vidas/sprites/entorno/fondo.png" id="6_bl3dt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbhp4"]
+size = Vector2(120.5, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4dkj"]
+size = Vector2(14.285715, 365.00003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m0q7"]
+size = Vector2(20.535032, 0.052781716)
+
+[sub_resource type="TileSet" id="TileSet_0uo0f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ojlq"]
+texture = ExtResource("6_bl3dt")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xp4gb"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_1ojlq")
+
+[node name="Primera Cuadra" type="Node2D" unique_id=1116139059]
+
+[node name="HUD" parent="." unique_id=786167898 instance=ExtResource("1_5iuem")]
+
+[node name="Personaje" parent="." unique_id=725968124 instance=ExtResource("2_wwejk")]
+position = Vector2(-89, 9)
+velocidad = null
+gravedad = null
+fuerza_salto = null
+
+[node name="Terreno" type="Node" parent="." unique_id=11075944]
+
+[node name="Plataforma (Saltable)3" type="StaticBody2D" parent="Terreno" unique_id=517125864]
+position = Vector2(98, -144)
+
+[node name="Plataforma" type="Sprite2D" parent="Terreno/Plataforma (Saltable)3" unique_id=800120366]
+position = Vector2(0, 2)
+texture = ExtResource("3_q7tpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/Plataforma (Saltable)3" unique_id=1339918190]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_gbhp4")
+one_way_collision = true
+
+[node name="Plataforma (Saltable)" type="StaticBody2D" parent="Terreno" unique_id=1909163115]
+position = Vector2(211, -49)
+
+[node name="Plataforma" type="Sprite2D" parent="Terreno/Plataforma (Saltable)" unique_id=1847628851]
+position = Vector2(0, 2)
+texture = ExtResource("3_q7tpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/Plataforma (Saltable)" unique_id=111850921]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_gbhp4")
+one_way_collision = true
+
+[node name="Plataforma (Saltable)2" type="StaticBody2D" parent="Terreno" unique_id=1283726234]
+position = Vector2(390, -107)
+
+[node name="Plataforma" type="Sprite2D" parent="Terreno/Plataforma (Saltable)2" unique_id=615011624]
+position = Vector2(0, 2)
+texture = ExtResource("3_q7tpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/Plataforma (Saltable)2" unique_id=1124064058]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_gbhp4")
+one_way_collision = true
+
+[node name="Muro" type="StaticBody2D" parent="Terreno" unique_id=1546440921]
+position = Vector2(1275, 70)
+scale = Vector2(53.930622, 11.985524)
+
+[node name="Tile" type="Sprite2D" parent="Terreno/Muro" unique_id=530872450]
+position = Vector2(-27.47975, -11.430455)
+rotation = -3.1415923
+scale = Vector2(0.011125405, -0.24785997)
+texture = ExtResource("4_tu8l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/Muro" unique_id=1949589370]
+position = Vector2(-27.498293, -10.804701)
+scale = Vector2(0.0934534, 0.08343398)
+shape = SubResource("RectangleShape2D_d4dkj")
+
+[node name="Suelo" type="StaticBody2D" parent="Terreno" unique_id=287155370]
+position = Vector2(1275, 70)
+scale = Vector2(53.930622, 11.985524)
+
+[node name="Tile" type="Sprite2D" parent="Terreno/Suelo" unique_id=1316989578]
+position = Vector2(-0.26316878, 2.3863635)
+scale = Vector2(0.45420673, 0.03843333)
+texture = ExtResource("4_tu8l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/Suelo" unique_id=952034917]
+position = Vector2(0.8262823, 2.0801969)
+scale = Vector2(2.760064, 86.595474)
+shape = SubResource("RectangleShape2D_5m0q7")
+
+[node name="Perro" parent="." unique_id=1771147760 instance=ExtResource("5_oh65p")]
+position = Vector2(620, 23)
+
+[node name="Obstaculos y Objetos" type="Node" parent="." unique_id=1111248094]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculos y Objetos" unique_id=1029186593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos y Objetos/StaticBody2D" unique_id=1755633343]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1690616491]
+tile_set = SubResource("TileSet_0uo0f")
+
+[node name="Fondo" type="Control" parent="." unique_id=438734866]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Fondo" unique_id=1027842143]
+z_index = -1
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAP//AAAAAAEAAAABAP//AAAAAAAAAAACAP//AAAAAAEAAAADAP//AAAAAAAAAAAEAP//AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_xp4gb")

@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://b7ciy6sh4ya0l"]
+
+[ext_resource type="Texture2D" uid="uid://bkxhnd262cutt" path="res://7 Vidas/sprites/ui/corazon.png" id="1_27h6m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n6e7s"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk4pp"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6i53"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg5sw"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twa46"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihywb"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux65o"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gunnt"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf8gq"]
+atlas = ExtResource("1_27h6m")
+region = Rect2(0, 0, 32, 32)
+
+[node name="HUD" type="CanvasLayer" unique_id=786167898]
+
+[node name="TiempoLabel" type="Label" parent="." unique_id=953825219]
+offset_top = 41.0
+offset_right = 40.0
+offset_bottom = 64.0
+label_settings = SubResource("LabelSettings_n6e7s")
+
+[node name="VidasControl2" type="Control" parent="." unique_id=923606486]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_top = -17.0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="VidasControl2" unique_id=1092584343]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 41.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_rk4pp")
+
+[node name="TextureRect2" type="TextureRect" parent="VidasControl2" unique_id=1515347195]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 60.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_s6i53")
+
+[node name="TextureRect3" type="TextureRect" parent="VidasControl2" unique_id=1758665200]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 17.0
+offset_right = 79.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_dg5sw")
+
+[node name="TextureRect4" type="TextureRect" parent="VidasControl2" unique_id=1422531477]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 17.0
+offset_right = 99.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_twa46")
+
+[node name="TextureRect5" type="TextureRect" parent="VidasControl2" unique_id=728922540]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 17.0
+offset_right = 119.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_ihywb")
+
+[node name="TextureRect6" type="TextureRect" parent="VidasControl2" unique_id=1576839529]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 17.0
+offset_right = 139.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_ux65o")
+
+[node name="TextureRect7" type="TextureRect" parent="VidasControl2" unique_id=28995765]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 17.0
+offset_right = 159.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_gunnt")
+
+[node name="VidasControl" type="Control" parent="." unique_id=35860002]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -17.0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="VidasControl" unique_id=726876093]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 41.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect2" type="TextureRect" parent="VidasControl" unique_id=1550972445]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 60.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect3" type="TextureRect" parent="VidasControl" unique_id=1455700490]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 17.0
+offset_right = 79.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect4" type="TextureRect" parent="VidasControl" unique_id=958310459]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 17.0
+offset_right = 99.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect5" type="TextureRect" parent="VidasControl" unique_id=1523550559]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 17.0
+offset_right = 119.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect6" type="TextureRect" parent="VidasControl" unique_id=1817425023]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 17.0
+offset_right = 139.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")
+
+[node name="TextureRect7" type="TextureRect" parent="VidasControl" unique_id=1904789446]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 17.0
+offset_right = 159.0
+offset_bottom = 57.0
+texture = SubResource("AtlasTexture_xf8gq")

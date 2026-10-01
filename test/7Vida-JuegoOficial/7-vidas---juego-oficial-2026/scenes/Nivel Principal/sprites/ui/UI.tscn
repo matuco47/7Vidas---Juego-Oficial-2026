@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c2ysf6ecagsyu"]
+
+[ext_resource type="Texture2D" path="res://7 Vidas/ui/5443f293-e122-4959-93b9-3a38f6c94a5b.png" id="1_07t1a"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=425280915]
+
+[node name="Control" type="Control" parent="." unique_id=33282059]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1118078781]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 124.0
+offset_bottom = 36.0
+scale = Vector2(1.5, 1.5)
+text = "X7"
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Label" unique_id=1788600315]
+position = Vector2(36.000004, 13)
+scale = Vector2(0.039872404, 0.040639184)
+texture = ExtResource("1_07t1a")

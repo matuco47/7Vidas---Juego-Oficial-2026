@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cui2huk43hy5x"]
+
+[ext_resource type="Texture2D" uid="uid://bn2bci1pfxtnd" path="res://assets/primer_panel.png" id="1_6uj0n"]
+[ext_resource type="Script" uid="uid://bnnxugdhyvksu" path="res://scenes/Comic Inicial/Scripts/comic.gd" id="1_axmit"]
+[ext_resource type="Texture2D" uid="uid://dls0kftspfukc" path="res://assets/Fondo Negro.png" id="2_810cn"]
+[ext_resource type="Texture2D" uid="uid://c1c80v0jsoffc" path="res://assets/2do_panel.png" id="2_axmit"]
+[ext_resource type="Texture2D" uid="uid://hwrdl5iy4rqi" path="res://assets/Comic 4.jpeg" id="5_kn4ny"]
+[ext_resource type="Texture2D" uid="uid://ckiqxdjr41hfw" path="res://assets/Comic 3.jpeg" id="6_36lf7"]
+
+[node name="Comic" type="Node2D" unique_id=1273109412]
+script = ExtResource("1_axmit")
+
+[node name="Fondo Negro" type="Sprite2D" parent="." unique_id=1447471850]
+position = Vector2(468, 222)
+scale = Vector2(1.7000165, 1.6845618)
+texture = ExtResource("2_810cn")
+
+[node name="ComicPage1" type="Sprite2D" parent="." unique_id=1423027390]
+position = Vector2(223.4874, 223.00002)
+scale = Vector2(0.4345457, 0.4345457)
+texture = ExtResource("1_6uj0n")
+
+[node name="ComicPage2" type="Sprite2D" parent="." unique_id=1148222573]
+position = Vector2(669, 226.99998)
+scale = Vector2(0.44104797, 0.44104797)
+texture = ExtResource("2_axmit")
+
+[node name="ComicPage4" type="Sprite2D" parent="." unique_id=1262231103]
+position = Vector2(1128, 447)
+scale = Vector2(0.44104797, 0.44104797)
+texture = ExtResource("5_kn4ny")
+
+[node name="ComicPage3" type="Sprite2D" parent="." unique_id=109910729]
+position = Vector2(1125, 223)
+scale = Vector2(0.44104797, 0.44104797)
+texture = ExtResource("6_36lf7")
+
+[node name="CameraPoints" type="Node2D" parent="." unique_id=2082332194]
+
+[node name="Panel1" type="Marker2D" parent="CameraPoints" unique_id=1394829995]
+position = Vector2(123, 118)
+
+[node name="Panel2" type="Marker2D" parent="CameraPoints" unique_id=1833877516]
+position = Vector2(347, 112)
+
+[node name="Panel3" type="Marker2D" parent="CameraPoints" unique_id=273756311]
+position = Vector2(218, 335)
+
+[node name="Panel4" type="Marker2D" parent="CameraPoints" unique_id=1601939237]
+position = Vector2(672, 287)
+
+[node name="Panel5" type="Marker2D" parent="CameraPoints" unique_id=1275866953]
+position = Vector2(1123, 109)
+
+[node name="Panel6" type="Marker2D" parent="CameraPoints" unique_id=599409022]
+position = Vector2(1127, 336)
+
+[node name="Panel7" type="Marker2D" parent="CameraPoints" unique_id=1132293986]
+position = Vector2(1128, 560)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=645351500]
+position = Vector2(-158, -32)
